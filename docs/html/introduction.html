@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. Python 简介 &mdash; Python tutorial 3.5.2 documentation</title>
+  <title>3. Python 简介 &mdash; Python tutorial 3.6.3 documentation</title>
   
 
   
@@ -28,7 +28,10 @@
   
 
   
-    <link rel="top" title="Python tutorial 3.5.2 documentation" href="index.html"/>
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Python tutorial 3.6.3 documentation" href="index.html"/>
         <link rel="next" title="4. 深入 Python 流程控制" href="controlflow.html"/>
         <link rel="prev" title="2. 使用 Python 解释器" href="interpreter.html"/> 
 
@@ -146,7 +149,7 @@
 <li class="toctree-l2"><a class="reference internal" href="stdlib.html#tut-batteries-included">10.12. “瑞士军刀”</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="stdlib2.html">11. 标准库浏览 &#8211; Part II</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="stdlib2.html">11. 标准库浏览 – Part II</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="stdlib2.html#tut-output-formatting">11.1. 输出格式</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stdlib2.html#tut-templating">11.2. 模板</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stdlib2.html#tut-binary-formats">11.3. 使用二进制数据记录布局</a></li>
@@ -205,7 +208,7 @@
     <li>3. Python 简介</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="_sources/introduction.txt" rel="nofollow"> View page source</a>
+          <a href="_sources/introduction.rst.txt" rel="nofollow"> View page source</a>
         
       </li>
   </ul>
@@ -267,7 +270,7 @@
 <span class="go">900</span>
 </pre></div>
 </div>
-<p>变量在使用前必须 &#8220;定义&#8221;(赋值)，否则会出错:</p>
+<p>变量在使用前必须 “定义”(赋值)，否则会出错:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># try to access an undefined variable</span>
 <span class="gp">... </span><span class="n">n</span>
 <span class="gt">Traceback (most recent call last):</span>
@@ -330,7 +333,7 @@
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;C:\some</span><span class="se">\n</span><span class="s1">ame&#39;</span><span class="p">)</span>  <span class="c1"># here \n means newline!</span>
 <span class="go">C:\some</span>
 <span class="go">ame</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">r&#39;C:\some\name&#39;</span><span class="p">)</span>  <span class="c1"># note the r before the quote</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\some\name&#39;</span><span class="p">)</span>  <span class="c1"># note the r before the quote</span>
 <span class="go">C:\some\name</span>
 </pre></div>
 </div>
@@ -431,7 +434,7 @@
 <span class="o">-</span><span class="mi">6</span>  <span class="o">-</span><span class="mi">5</span>  <span class="o">-</span><span class="mi">4</span>  <span class="o">-</span><span class="mi">3</span>  <span class="o">-</span><span class="mi">2</span>  <span class="o">-</span><span class="mi">1</span>
 </pre></div>
 </div>
-<p>文本中的第一行数字给出字符串中的索引点 0...6。第二行给出相应的负索引。切片是从 <em>i</em> 到 <em>j</em> 两个数值标示的边界之间的所有字符。</p>
+<p>文本中的第一行数字给出字符串中的索引点 0…6。第二行给出相应的负索引。切片是从 <em>i</em> 到 <em>j</em> 两个数值标示的边界之间的所有字符。</p>
 <p>对于非负索引，如果上下都在边界内，切片长度就是两个索引之差。例如，<code class="docutils literal"><span class="pre">word[1:3]</span></code> 是 2 。</p>
 <p>试图使用太大的索引会导致错误:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">42</span><span class="p">]</span>  <span class="c1"># the word only has 6 characters</span>
@@ -447,7 +450,7 @@
 <span class="go">&#39;&#39;</span>
 </pre></div>
 </div>
-<p>Python字符串不可以被更改 &#8212; 它们是 <a class="reference external" href="https://docs.python.org/3/glossary.html#term-immutable">不可变的</a> 。因此，赋值给字符串索引的位置会导致错误:</p>
+<p>Python字符串不可以被更改 — 它们是 <a class="reference external" href="https://docs.python.org/3/glossary.html#term-immutable">不可变的</a> 。因此，赋值给字符串索引的位置会导致错误:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;J&#39;</span>
 <span class="go">  ...</span>
 <span class="go">TypeError: &#39;str&#39; object does not support item assignment</span>
@@ -587,11 +590,11 @@
 <li><p class="first">第一行包括了一个 <em>多重赋值</em>：变量 <code class="docutils literal"><span class="pre">a</span></code> 和 <code class="docutils literal"><span class="pre">b</span></code> 同时获得了新的值 0 和 1 最后一行又使用了一次。</p>
 <p>在这个演示中，变量赋值前，右边首先完成计算。右边的表达式从左到右计算。</p>
 </li>
-<li><p class="first">条件（这里是 <code class="docutils literal"><span class="pre">b</span> <span class="pre">&lt;</span> <span class="pre">10</span></code> ）为 true 时， <a class="reference external" href="https://docs.python.org/3/reference/compound_stmts.html#while">while</a> 循环执行。在 Python 中，类似于 C，任何非零整数都是 true；0 是 false 条件也可以是字符串或列表，实际上可以是任何序列；</p>
+<li><p class="first">条件（这里是 <code class="docutils literal"><span class="pre">b</span> <span class="pre">&lt;</span> <span class="pre">10</span></code> ）为 true 时， <a class="reference external" href="https://docs.python.org/3/reference/compound_stmts.html#while">while</a> 循环执行。在 Python 中，类似于 C，任何非零整数都是 true；0 是 false。条件也可以是字符串或列表，实际上可以是任何序列；</p>
 <p>所有长度不为零的是 true，空序列是 false。示例中的测试是一个简单的比较。标准比较操作符与 C 相同： <code class="docutils literal"><span class="pre">&lt;</span></code> ， <code class="docutils literal"><span class="pre">&gt;</span></code> ， <code class="docutils literal"><span class="pre">==</span></code> ， <code class="docutils literal"><span class="pre">&lt;=</span></code>， <code class="docutils literal"><span class="pre">&gt;=</span></code> 和 <code class="docutils literal"><span class="pre">!=</span></code>。</p>
 </li>
-<li><p class="first">循环 <em>体</em> 是 <em>缩进</em> 的：缩进是 Python 是 Python 组织語句的方法。Python (还)不提供集成的行编辑功能，所以你要为每一个缩进行输入 TAB 或空格。</p>
-<p>实践中建议你找个文本编辑来录入复杂的 Python 程序，大多数文本编辑器提供自动缩进。交互式录入复合语句时，必须在最后输入一个空行来标识结束（因为解释器没办法猜测你输入的哪一行是最后一行），需要 注意的是同一个语句块中的语句块必须缩进同样数量的空白。</p>
+<li><p class="first">循环 <em>体</em> 是 <em>缩进</em> 的：缩进是 Python 组织语句的方法。Python (还)不提供集成的行编辑功能，所以你要为每一个缩进行输入 TAB 或空格。</p>
+<p>实践中建议你找个文本编辑来录入复杂的 Python 程序，大多数文本编辑器提供自动缩进。交互式录入复合语句时，必须在最后输入一个空行来标识结束（因为解释器没办法猜测你输入的哪一行是最后一行），需要 注意的是同一个语句块中的每一行必须缩进同样数量的空白。</p>
 </li>
 <li><p class="first">关键字 <a class="reference external" href="https://docs.python.org/3/library/functions.html#print">print()</a> 语句输出给定表达式的值。它控制多个表达式和字符串输出为你想要字符串（就像我们在前面计算器的例子中那样）。</p>
 <p>字符串打印时不用引号包围，每两个子项之间插入空间，所以你可以把格式弄得很漂亮，像这样:</p>
@@ -666,7 +669,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'3.5.2',
+            VERSION:'3.6.3',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
